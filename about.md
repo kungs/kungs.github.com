@@ -8,7 +8,7 @@ tagline: Supporting tagline
 
 我叫杨康，一名 RubyOnRails 程序员，这个博客用来记录我的随想及心得。
 
-<img src='kungs.jpg' alt='kuns'/>
+<img src='kungs.jpg' alt='kungs'/>
 
 - Github: <a href="https://www.github.com/kungs" target="_blank">kungs</a> 
 - Email:  [kungs.yung@gmail.com](mailto:kungs.yung@gmail.com)
