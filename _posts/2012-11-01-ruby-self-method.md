@@ -28,6 +28,8 @@ Ruby的self在使用时需要多加小心，在不同的地方使用，效果是
 	Person
 	=> Person
     
+---
+
 >在‘类方法’中
 
 	1.9.3p362 :001 > class Person
@@ -39,7 +41,7 @@ Ruby的self在使用时需要多加小心，在不同的地方使用，效果是
 	1.9.3p362 :006 > Person.method
 	Person
 	 => Person
-此时得到的是Person这个Class。需要主要的是，这里self.method不需Person实例化，直接调用。
+此时得到的是Person这个Class。需要注意的是，这里self.method不需Person实例化，直接调用。
 
 ---
 
