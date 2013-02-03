@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "关于Ruby的self"
-category: rails
+category: ruby
 tags: []
 ---
 {% include JB/setup %}
