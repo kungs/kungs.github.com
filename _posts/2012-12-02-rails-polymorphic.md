@@ -8,6 +8,8 @@ tags: []
 
 现在有个场景：两个model：Album 和 Book，这两个model都需要添加一个图片。有两种方法：
 
+---
+
 >建立直接关联关系
 
 首先，添加一个Imgae model，做一下设置：  
@@ -24,11 +26,10 @@ tags: []
 	end
 
 同时，表albums添加字段：image_id, 表books添加字段：image_id。  
-
----
-
 搞定，完全符合要求。  
 过了一天，客户说，Person加个头像吧，好吧，只能把上边的步骤重复一遍，不觉的烦么？  
+
+---
 
 >建立polymorphic关联关系
 	class Album < AcitveRecord::Base
