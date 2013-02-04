@@ -45,13 +45,13 @@ tags: []
 此时，imgaes表中需加两个属性： imagable_id, imagable_type 。  
 
 	@book = Book.new(params[:book])
-	@book.build_image(params[:image]
+	@book.build_image(params[:image])
 	@book.save
 	@book.image
 
 或者：  
 
 	@book = Book.new(params[:book])
-	@image = Image.create(params[:image]
+	@image = Image.create(params[:image])
 	@image.imagbale = @image
 	@book.save
