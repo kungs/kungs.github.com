@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "在Rails使用polymorphic"
+title: "在Rails中使用polymorphic(多态)"
 category: rails
 tags: []
 ---
 {% include JB/setup %}
 现在有个场景：两个model：Album 和 Book，这两个model都需要添加一个图片。有两种方法：
 >建立直接关联关系
-首先，添加一个Imgae model，做一下设置：
+首先，添加一个Imgae model，做一下设置：  
 	class Album < ActiveRecord::Base
 	  has_one :image, :dependent => :destroy
 	end
@@ -32,12 +32,12 @@ tags: []
 	  belongs_to :imagable, :polymorphic => true
 	end
 此时，imgaes表中需加两个属性： imagable_id, imagable_type 。  
-这样的话，
+这样的话，  
 	@book = Book.new(params[:book])
 	@bool.build_image(params[:image]
 	@book.save
 	@book.image
-或者：
+或者：  
 	@book = Book.new(params[:book])
 	@image = Image.create(params[:image]
 	@image.imagbale = @image
