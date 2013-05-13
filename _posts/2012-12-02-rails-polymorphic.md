@@ -26,6 +26,7 @@ tags: []
 	end
 
 同时，表albums添加字段：image_id, 表books添加字段：image_id。  
+<!-- more -->
 搞定，完全符合要求。  
 过了一天，客户说，Person加个头像吧，好吧，只能把上边的步骤重复一遍，不觉的烦么？  
 
