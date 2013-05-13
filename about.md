@@ -6,7 +6,7 @@ tagline: Supporting tagline
 
 {% include JB/setup %}
 
-我叫杨康，一名 RubyOnRails 程序员，这个博客用来记录我的随想及心得。
+我叫杨康，一名 Ruby On Rails 程序员，这个博客用来记录我的随想及心得。
 
 <img src='kungs.jpg' alt='kungs'/>
 
