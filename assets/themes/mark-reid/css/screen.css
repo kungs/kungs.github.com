@@ -303,7 +303,7 @@ p.line { position: relative; margin: 0; }
 p.excerpt { margin: 0; }
 .comments { font-size: smaller; position: absolute; color: silver; right: 0; top: 0; }
 .excerpt { color: black; }
-.post-title { font-size: 1.3em }_
+.post-title { font-size: 1.3em }
 .post-title a { color: black; }
 
 /* @group Signature */
