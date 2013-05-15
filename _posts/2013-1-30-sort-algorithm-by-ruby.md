@@ -14,6 +14,8 @@ tags: []
     
     class Array
       def bubble_sort
+        return self if self.size < 2
+
         1.upto self.size - 1 do |i|
           1.upto self.size - i do |j|
             self[j], self[j - 1] = self[j - 1], self[j] if self[j] > self[j - 1]
@@ -27,3 +29,15 @@ tags: []
     => [1, 3, 53, 64, 5, 7, 98, 34] 
     1.9.3p327:> a.bubble_sort
     => [98, 64, 53, 34, 7, 5, 3, 1] 
+
+>快速排序
+
+    class Array
+      def quick_sort(a = self)
+        return a if a.size <= 1
+        middle = a.shift
+        left, right = a.partition {|elem| elem > middle}
+
+        quick_sort(left) + [middle] + quick_sort(right)
+      end
+    end
