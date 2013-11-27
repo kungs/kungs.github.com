@@ -39,14 +39,17 @@ tags: []
     # -j4  - number of parallel jobs (just in case)
 
 现在安装包出现在上一层目录：
+
     dpkg-deb -I ../nginx-full_1.2.1-2.2ubuntu0.1_amd64.deb      # Information about the package
 
 安装这个包：
+
     dpkg -i /tmp/nginx-common_1.2.1-2.2ubuntu0.1_all.deb
     dpkg -i /tmp/nginx-full_1.2.1-2.2ubuntu0.1_amd64.deb
 
 >System update may reinstall Nginx and remove your modifications
 
 当新版本nginx出来的时候，你重新编译的nginx有可能会被覆盖，为了防止覆盖，你需要这样做：
+
     sudo aptitude hold nginx
     sudo aptitude hold nginx-full
