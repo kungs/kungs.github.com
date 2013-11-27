@@ -24,8 +24,7 @@ tags: []
     cd /tmp/nginx-1.2.1/debian/modules     # Go to Nginx "modules" dir
     ln -s /tmp/nginx-push-stream-module    # and add a link to your module dir
 
-Now add this module into Nginx configuration - edit "/tmp/nginx-1.2.1/debian/rules".
-Add a line to the "Full" configuration:
+现在编辑 "/tmp/nginx-1.2.1/debian/rules" 这个文件，将下面一行加进去：
 
     ...
     --add-module=$(MODULESDIR)/nginx-push-stream-module \
@@ -39,16 +38,15 @@ Add a line to the "Full" configuration:
     # -b   - binary-only build, no sources
     # -j4  - number of parallel jobs (just in case)
 
-Note that .deb file appeared in a parent dir.
+现在安装包出现在上一层目录：
     dpkg-deb -I ../nginx-full_1.2.1-2.2ubuntu0.1_amd64.deb      # Information about the package
 
-Install recompiled .deb file:
+安装这个包：
     dpkg -i /tmp/nginx-common_1.2.1-2.2ubuntu0.1_all.deb
     dpkg -i /tmp/nginx-full_1.2.1-2.2ubuntu0.1_amd64.deb
 
 >System update may reinstall Nginx and remove your modifications
 
-Аfter you upgrade to a new version nginx, this recompiled package will be overwritten.
-To prevent this use:
+当新版本nginx出来的时候，你重新编译的nginx有可能会被覆盖，为了防止覆盖，你需要这样做：
     sudo aptitude hold nginx
     sudo aptitude hold nginx-full
