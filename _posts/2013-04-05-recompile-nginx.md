@@ -27,9 +27,7 @@ tags: []
 Now add this module into Nginx configuration - edit "/tmp/nginx-1.2.1/debian/rules"
 Add a line to the "Full" configuration:
 
-    ...
     --add-module=$(MODULESDIR)/nginx-push-stream-module \
-    ...
 
 >Compile the package
 
