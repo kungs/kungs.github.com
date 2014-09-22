@@ -11,7 +11,8 @@ tags: []
 ---
 
 >直接查看进程是否存在
-		#!/usr/bin/env bash
+
+		#!/bin/bash
 
 		D=`date -d "seconds" "+%Y_%m_%d_%H_%M_%S" `
 		echo $D
@@ -24,6 +25,7 @@ tags: []
 		fi
 
 >通过查看进程id来判断
+
 		#!/bin/bash
 
 		#根据某个字符串查找匹配到的pid
@@ -55,7 +57,5 @@ tags: []
 			exit 1
 		fi
 
-		root_dir=`dirname $0`
-
-		nohup ruby ${root_dir}/gateway.rb ${root_dir}/../cfg/gateway.conf &>> ${root_dir}/gateway.log &
+		nohup ruby test.rb &
 		echo "run $proc_str succ!"
