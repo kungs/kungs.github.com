@@ -19,7 +19,7 @@ tags: []
 		proc_num=`ps ax | grep ruby | grep do_refund_action | wc -l`
 		if [ $proc_num -eq 0 ]; then 
 			echo 'start up do_refund_action'
-			nohup /usr/local/rvm/rubies/ruby-2.1.1/bin/ruby /home/admin/web/pay/trunk/script/rails  runner -e production 'Refund.do_refund_action; Rails.logger.flush' & 
+			nohup ruby do_refund_action.rb & 
 		else
 			echo "do_refund_action is running ...."
 		fi
