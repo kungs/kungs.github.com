@@ -32,6 +32,7 @@ tags: []
 ---
 
 >建立polymorphic关联关系
+
 	class Album < AcitveRecord::Base
 	  has_one :image, :as => imagable, :dependent => :destroy
 	end
